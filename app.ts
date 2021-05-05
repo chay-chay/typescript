@@ -88,3 +88,44 @@ const add2 = (num1: number, num2:number): number => {
 const result2 = add(1, 4);
 
 console.log(result) // 5
+
+
+// skip Tuple and ENUM
+// void - means function no return
+// never - no return
+const greeting = (text: string): void => {
+   console.log(text)
+}
+
+const greeting2 = (text: string): never => {
+    throw new Error ("Error")
+ }
+
+ // Interface 
+type MyType = string | boolean | "Hi"
+interface AdultPerson {
+    name: string;
+    age: number;
+    isMarried: boolean;
+    // greeting: (text: string) => void
+    // add: (num1: number, num2: number) => number
+}
+interface RichPerson {
+    isRich: boolean;
+}
+ 
+type Mix = AdultPerson & RichPerson;
+class Family implements AdultPerson, RichPerson {
+    name = "";
+    age = 0;
+    isMarried = false;
+    isRich = true;
+
+
+    constructor(name: string, age: number, isMarried: boolean, isRich: boolean) {
+        this.name = name;
+        this.age = age;
+        this.isMarried = isMarried;
+        this.isRich = isRich;
+    }
+}
