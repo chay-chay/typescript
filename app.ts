@@ -78,4 +78,13 @@ type NestedObject = {
 
 // Literal - set specific value (we can set only female too)
 type Gender = "female" | "male";
-const bay:Gender = "male"
+const bay: Gender = "male"
+
+// return type
+const add2 = (num1: number, num2:number): number => {
+   return num1 + num2
+}
+
+const result2 = add(1, 4);
+
+console.log(result) // 5
