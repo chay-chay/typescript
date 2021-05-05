@@ -37,8 +37,12 @@ const person: Person = {
 
 // set type for number
 // num2? - means optional
-const add = (num1: number, num2:number) => {
-    return num1 + num2
+const add = (num1: number, num2?:number) => {
+    if (!num2) {
+        return num1;
+    } else {
+        return num1 + num2;
+    }
 }
 
 const result = add(1, 4);
@@ -68,3 +72,6 @@ const human: Kid & Nickname = {
 
 
 // nested 
+type NestedObject = {
+    mom: {name: string, age: number, children: string[]}
+}
