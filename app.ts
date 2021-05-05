@@ -71,7 +71,11 @@ const human: Kid & Nickname = {
 }
 
 
-// nested 
+// nested obj
 type NestedObject = {
-    mom: {name: string, age: number, children: string[]}
+    mom: { name: string; age: number; children: string[]; x:{key1: string}}
 }
+
+// Literal - set specific value (we can set only female too)
+type Gender = "female" | "male";
+const bay:Gender = "male"
