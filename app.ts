@@ -47,3 +47,24 @@ console.log(result) // 5
 
 // union type
 type Name = string | number;
+const friend: Name = "Chay"
+const friend2: Name = 50;
+
+// Intersection
+type Kid= {
+    name: string,
+    age: number;
+}
+
+type Nickname= {
+    nickname: string;
+}
+
+const human: Kid & Nickname = {
+    name: "Dek",
+    age: 5,
+    nickname: "B"
+}
+
+
+// nested 
